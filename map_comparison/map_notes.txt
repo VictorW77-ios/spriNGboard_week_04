@@ -1,0 +1,1 @@
+The map prints out vector 'item' elements in ascending order from least to greatest. After reading through the documentation, I saw that maps are structured as self-balancing binary trees and I remember from the lecture that binary trees search in O(log n) time, where n = 14 in this case.  

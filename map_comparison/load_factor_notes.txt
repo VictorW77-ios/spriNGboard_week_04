@@ -1,0 +1,6 @@
+- The load_factor of an unorganized_map is the ratio between the num of elems and
+- the num of buckets ( unordered_map.size()/unordered_map.bucket_count() ) in the hash table. 
+- This ratio shows the probability of a collision occuring in the table if two elements are located in the same bucket. 
+- To avoid collisions and keep the load_factor from hitting it's maximum, the container automatically increases the amount of 
+- buckets available to store values - this causes a rehash every time the hash table has to expanded to accomodate the necessary space
+- This occurred when the function printed out the unorg_map values 1-2 and again from 3-6 when the bucket_count was increased from 7 to 17 to accomodate the increase 

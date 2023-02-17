@@ -1,0 +1,1 @@
+The unordered_map prints out the key,value pairs in vector 'items' in seemingly random order but this is because unordered_map is implemented using a hash table where each element is stored in an individual bucket based on the hash value of their key. Also, '.insert()' elements into an unordered_map runs in constant O(1) time. 
