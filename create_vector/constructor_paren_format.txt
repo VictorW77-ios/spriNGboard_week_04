@@ -1,0 +1,1 @@
+The constructor-like parentheses format 'vector<int> v(10, 5)' successfully output the elements in the vector. To me, it seems like the constructor syntax is more readable. It would be interesting to see the difference in using assignments vs constructors in terms of runtime or efficiency. 

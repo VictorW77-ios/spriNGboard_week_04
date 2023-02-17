@@ -1,0 +1,1 @@
+The assignment-like syntax with braces ('vector<int> v = {10,5}') also printed out the values of each element in the vector -> (10 5) 

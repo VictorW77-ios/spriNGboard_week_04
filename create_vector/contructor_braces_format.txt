@@ -1,0 +1,1 @@
+The braces or modern initializer list format 'vector<int> v{10,5}' printed out the value of each element in vector 'v' -> 10 5   
