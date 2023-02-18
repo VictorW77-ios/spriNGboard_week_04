@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-
+#include <numeric>
+#include <algorithm>
 ////////////////////////////////////
 // INCLUDE NECESSARY HEADERS HERE //
 ////////////////////////////////////
@@ -18,6 +19,7 @@ void test_algorithms (int N)
   // FILLED WITH ZEROS        //
   //////////////////////////////
 
+  vector<int> v(N, 0);
 
   print_vector(v);
 
@@ -25,7 +27,7 @@ void test_algorithms (int N)
   // USE iota TO FILL v        //
   // WITH VALUES STARTING AT 5 //
   ///////////////////////////////
-
+  iota(v.begin(), v.end(), 5); 
 
   print_vector(v);
 
@@ -34,7 +36,7 @@ void test_algorithms (int N)
   // BETWEEN THE THIRD AND FIFTH FROM  //
   // LAST POSITIONS                    //
   ///////////////////////////////////////
-
+  reverse(v.begin()+3, v.end()-11);
 
   print_vector(v);
 
@@ -42,7 +44,7 @@ void test_algorithms (int N)
   // USE fill TO FILL THE FIRST FOUR //
   // VALUES WITH 20s                 //
   /////////////////////////////////////
-
+  fill(v.begin(), v.end()-11, 20);
 
   print_vector(v);
 
@@ -50,7 +52,7 @@ void test_algorithms (int N)
   // USE sort TO SORT ALL BUT THE FIRST //
   // AND LAST VALUES                    //
   ////////////////////////////////////////
-
+  sort (v.begin()+1, v.end()-1);
 
   print_vector(v);
 
@@ -59,7 +61,17 @@ void test_algorithms (int N)
   // TO SORT ALL EVEN NUMBERS TO THE       //
   // FRONT AND ALL ODD NUMBERS TO THE BACK //
   ///////////////////////////////////////////
+  sort(v.begin(), v.end(), [](const int& front, const int& back) -> bool
+  {
+    if(front & 1 && back & 1) //bitwise AND = 1 only if both bits are 1/odd  
+      return front < back;
+    else if(front & 1)
+      return false;
+    else if(back & 1)
+      return true; 
 
+    return front < back; 
+  });
 
   print_vector(v);
 }
