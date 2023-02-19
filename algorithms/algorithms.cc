@@ -36,9 +36,9 @@ void test_algorithms (int N)
   // BETWEEN THE THIRD AND FIFTH FROM  //
   // LAST POSITIONS                    //
   ///////////////////////////////////////
-  reverse(v.begin()+10, v.end()-2); // 3rd from last -> 5th from last
+  // reverse(v.begin()+10, v.end()-2); // 3rd from last -> 5th from last
   
-  // reverse(v.begin()+2, v.end()-2);  //3rd -> 5th from last
+  reverse(v.begin()+2, v.end()-4);  //3rd -> 5th from last
   
   print_vector(v);
 
