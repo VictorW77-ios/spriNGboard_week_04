@@ -36,8 +36,10 @@ void test_algorithms (int N)
   // BETWEEN THE THIRD AND FIFTH FROM  //
   // LAST POSITIONS                    //
   ///////////////////////////////////////
-  reverse(v.begin()+3, v.end()-11);
-
+  reverse(v.begin()+10, v.end()-2); // 3rd from last -> 5th from last
+  
+  // reverse(v.begin()+2, v.end()-2);  //3rd -> 5th from last
+  
   print_vector(v);
 
   /////////////////////////////////////
@@ -64,13 +66,13 @@ void test_algorithms (int N)
   sort(v.begin(), v.end(), [](const int& front, const int& back) -> bool
   {
     if(front & 1 && back & 1) //bitwise AND = 1 only if both bits are 1/odd  
-      return front < back;
+      return false;
     else if(front & 1)
       return false;
     else if(back & 1)
       return true; 
 
-    return front < back; 
+    return false; 
   });
 
   print_vector(v);
